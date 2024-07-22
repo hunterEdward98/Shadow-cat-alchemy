@@ -19,11 +19,19 @@ if (vector_length != 0) {
     vector_y /= vector_length;
 }
 if (mouse_check_button(1)){
-	if(keyboard_key_press(vk_control)){
-	    //handle STALK controls
+	if(keyboard_check_direct(vk_lcontrol)){
+		image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+		x += vector_x * stalk_speed;
+		y += vector_y * stalk_speed;
 	}
-	else{
+	else if(attack_timer <= 0){
+		
+		image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+		attack_timer = 100;
 		x += vector_x * min(max_jump, vector_length);
 		y += vector_y * min(max_jump, vector_length);
 	}
+}
+if(attack_timer > 0){
+	attack_timer--;
 }
