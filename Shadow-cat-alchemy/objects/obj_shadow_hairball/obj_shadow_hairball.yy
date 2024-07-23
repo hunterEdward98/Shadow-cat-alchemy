@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"Interactive",
-  "eventList":[],
+  "%Name":"obj_shadow_hairball",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_light_source","path":"objects/obj_light_source/obj_light_source.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Interactive",
+  "name":"obj_shadow_hairball",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactive",
-    "path":"folders/Objects/Interactive.yy",
+    "name":"Projectiles",
+    "path":"folders/Objects/Projectiles.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_shadow_hairball",
+    "path":"sprites/spr_shadow_hairball/spr_shadow_hairball.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

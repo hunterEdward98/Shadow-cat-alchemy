@@ -1,1 +1,0 @@
-global.lightLevel = 5;

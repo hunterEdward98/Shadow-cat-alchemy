@@ -1,0 +1,1 @@
+global.light_level = 0;

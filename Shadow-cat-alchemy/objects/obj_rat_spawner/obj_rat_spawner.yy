@@ -1,9 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"Rat_Spawner",
-  "eventList":[],
+  "%Name":"obj_rat_spawner",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"Rat_Spawner",
+  "name":"obj_rat_spawner",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

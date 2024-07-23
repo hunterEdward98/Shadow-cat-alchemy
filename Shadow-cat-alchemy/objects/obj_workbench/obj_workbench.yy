@@ -1,15 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"Workbench",
+  "%Name":"obj_workbench",
   "eventList":[],
   "managed":true,
-  "name":"Workbench",
+  "name":"obj_workbench",
   "overriddenProperties":[],
   "parent":{
     "name":"Interactive",
     "path":"folders/Objects/Interactive.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_interactive",
+    "path":"objects/obj_interactive/obj_interactive.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
