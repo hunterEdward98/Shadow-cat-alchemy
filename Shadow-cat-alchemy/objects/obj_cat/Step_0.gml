@@ -19,20 +19,38 @@ if (vector_length != 0) {
     vector_y /= vector_length;
 }
 
-//POUNCE/STALK events
+
+//POUNCE event
 if (mouse_check_button(1)){
-	if(keyboard_check_direct(vk_lcontrol)){
-		image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
-		x += vector_x * stalk_speed;
-		y += vector_y * stalk_speed;
-	}
-	else if(attack_timer <= 0){
-		
+	show_debug_message("L Mouse Pressed");
+	 if(attack_timer <= 0){
 		image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
 		attack_timer = 30 * global.light_level;
 		x += vector_x * min(max_jump, vector_length);
 		y += vector_y * min(max_jump, vector_length);
 	}
+}
+
+
+////STALK event
+if (keyboard_check(ord("D"))){
+         hspeed = stalk_speed;
+		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+} else if (keyboard_check(ord("A"))){
+         hspeed = -stalk_speed
+		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+} else {
+         hspeed = 0;
+}
+
+if (keyboard_check(ord("W"))){
+         vspeed = -stalk_speed;		 
+		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+} else if (keyboard_check(ord("S"))){
+         vspeed = stalk_speed
+		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+} else {
+         vspeed = 0;
 }
 
 
@@ -44,7 +62,6 @@ if(keyboard_check(vk_space) && attack_timer <=0){
 	new_hairball.direction = image_angle + 90; // Set the direction (e.g., the direction the player is facing)
 	attack_timer = 20 * global.light_level;
 }
-
 
 
 if(attack_timer > 0){
