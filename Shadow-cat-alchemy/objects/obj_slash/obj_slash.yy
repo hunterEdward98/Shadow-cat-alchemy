@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_shadow_hairball",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_light_source","path":"objects/obj_light_source/obj_light_source.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_slash",
+  "eventList":[],
   "managed":true,
-  "name":"obj_shadow_hairball",
+  "name":"obj_slash",
   "overriddenProperties":[],
   "parent":{
     "name":"Projectiles",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite11",
-    "path":"sprites/Sprite11/Sprite11.yy",
+    "name":"spr_shadow_hairball",
+    "path":"sprites/spr_shadow_hairball/spr_shadow_hairball.yy",
   },
   "spriteMaskId":null,
   "visible":true,

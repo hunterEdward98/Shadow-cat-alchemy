@@ -19,10 +19,11 @@ if (vector_length != 0) {
     vector_y /= vector_length;
 }
 
+image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+
 
 //POUNCE event
 if (mouse_check_button(1)){
-	show_debug_message("L Mouse Pressed");
 	 if(attack_timer <= 0){
 		image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
 		attack_timer = 30 * global.light_level;
@@ -34,23 +35,42 @@ if (mouse_check_button(1)){
 
 ////STALK event
 if (keyboard_check(ord("D"))){
-         hspeed = stalk_speed;
+         hspeed = stalk_speed * global.light_level;
 		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
 } else if (keyboard_check(ord("A"))){
-         hspeed = -stalk_speed
+         hspeed = -stalk_speed * global.light_level;
 		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
 } else {
          hspeed = 0;
 }
 
 if (keyboard_check(ord("W"))){
-         vspeed = -stalk_speed;		 
+         vspeed = -stalk_speed * global.light_level;	 
 		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
 } else if (keyboard_check(ord("S"))){
-         vspeed = stalk_speed
+         vspeed = stalk_speed * global.light_level;
 		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
 } else {
          vspeed = 0;
+}
+
+
+//Slash Event
+if(mouse_check_button_pressed(2)){ 
+	slashWave =  instance_create_layer(x + 30, y + 30, "Projectiles", obj_slash);
+	slashWave.image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+	slashWave.direction = image_angle + 90;
+	with (obj_rat) {
+	if (point_distance(other.x, other.y, x, y) < 100) {
+			// Destroy the obj_rat instance
+			instance_destroy();			
+		}
+	}
+	//Handle sprite removal
+	var _fadeOut = function(){
+		obj_slash.image_alpha -= 1;
+	}
+	var slashTimer = call_later(0.3, time_source_units_seconds, _fadeOut);
 }
 
 
