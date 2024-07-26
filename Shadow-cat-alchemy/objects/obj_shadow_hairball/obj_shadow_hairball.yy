@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite11",
-    "path":"sprites/Sprite11/Sprite11.yy",
+    "name":"spr_hairball",
+    "path":"sprites/spr_hairball/spr_hairball.yy",
   },
   "spriteMaskId":null,
   "visible":true,

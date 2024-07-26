@@ -35,21 +35,17 @@ if (mouse_check_button(1)){
 
 ////STALK event
 if (keyboard_check(ord("D"))){
-         hspeed = stalk_speed * global.light_level;
-		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+         hspeed = stalk_speed * (12 /( global.light_level + 3));
 } else if (keyboard_check(ord("A"))){
-         hspeed = -stalk_speed * global.light_level;
-		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+         hspeed = -stalk_speed * (12 / (global.light_level + 3));
 } else {
          hspeed = 0;
 }
 
 if (keyboard_check(ord("W"))){
-         vspeed = -stalk_speed * global.light_level;	 
-		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+         vspeed = -stalk_speed * (12 /( global.light_level + 3));	 
 } else if (keyboard_check(ord("S"))){
-         vspeed = stalk_speed * global.light_level;
-		 image_angle = point_direction(player_x, player_y, mouse_x_pos, mouse_y_pos)- 90;
+         vspeed = stalk_speed * (12 /( global.light_level + 3));
 } else {
          vspeed = 0;
 }

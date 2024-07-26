@@ -11,6 +11,7 @@ if (target_instance != noone) {
 		animation_timer--;
 		speed = 0;
 	}else{ 
+		sprite_index = wizard_1;
 		speed = 2
 	};
 } else {

@@ -2,8 +2,8 @@
 is_on = irandom(1) > 0; // irandom(1) gives 0 or 1
 
 // Assign the sprite variables
-spr_off = spr_light_source_on;
-spr_on = spr_light_source_off;
+spr_off = spr_light_source_off;
+spr_on = spr_light_source_on;
 
 // Set the initial sprite based on the state
 if (is_on) {

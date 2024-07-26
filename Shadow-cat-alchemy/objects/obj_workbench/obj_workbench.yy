@@ -4,7 +4,10 @@
   "eventList":[],
   "managed":true,
   "name":"obj_workbench",
-  "overriddenProperties":[],
+  "overriddenProperties":[
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interactive","path":"objects/obj_interactive/obj_interactive.yy",},"propertyId":{"name":"wizard_interact_animation","path":"objects/obj_interactive/obj_interactive.yy",},"resource":{"name":"wizard_interact_ingredients","path":"sprites/wizard_interact_ingredients/wizard_interact_ingredients.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"wizard_interact_ingredients",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_interactive","path":"objects/obj_interactive/obj_interactive.yy",},"propertyId":{"name":"wizard_interact_time","path":"objects/obj_interactive/obj_interactive.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"500",},
+  ],
   "parent":{
     "name":"Interactive",
     "path":"folders/Objects/Interactive.yy",

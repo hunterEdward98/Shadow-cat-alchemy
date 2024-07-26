@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_shadow_hairball",
-    "path":"sprites/spr_shadow_hairball/spr_shadow_hairball.yy",
+    "name":"spr_slash",
+    "path":"sprites/spr_slash/spr_slash.yy",
   },
   "spriteMaskId":null,
   "visible":true,

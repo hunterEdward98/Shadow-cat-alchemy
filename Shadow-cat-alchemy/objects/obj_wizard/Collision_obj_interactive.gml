@@ -3,8 +3,8 @@
 // Create an empty list to store instances of Interactive objects
 if(other.id == target_instance.id){
 	
-	
-	animation_timer = 230
+	sprite_index = other.wizard_interact_animation;
+	animation_timer = other.wizard_interact_time;
 	//TODO special animation stuff here
 	//We might want to store a spritemap of the animation in the object we're colliding with, 
 	//that way we just set use the other.wizard_collision_sprite and other.wizard_animation_time 
