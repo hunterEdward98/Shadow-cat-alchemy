@@ -30,16 +30,13 @@
     {"$GMObjectProperty":"v1","%Name":"base_movement","filters":[],"listItems":[],"multiselect":false,"name":"base_movement","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"current_movement","filters":[],"listItems":[],"multiselect":false,"name":"current_movement","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"attack_timer","filters":[],"listItems":[],"multiselect":false,"name":"attack_timer","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v1","%Name":"max_jump","filters":[],"listItems":[],"multiselect":false,"name":"max_jump","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"400","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"max_jump_dst","filters":[],"listItems":[],"multiselect":false,"name":"max_jump_dst","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"300","varType":1,},
     {"$GMObjectProperty":"v1","%Name":"stalk_speed","filters":[],"listItems":[],"multiselect":false,"name":"stalk_speed","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"3","varType":0,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"cat_1",
-    "path":"sprites/cat_1/cat_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

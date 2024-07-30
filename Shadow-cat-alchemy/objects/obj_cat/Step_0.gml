@@ -25,36 +25,30 @@ if(!is_attacking){
 //POUNCE event
 
 if (mouse_check_button(1)){
-		x += vector_x * min(max_jump, vector_length);
-		y += vector_y * min(max_jump, vector_length);
-		obj_cat.is_attacking = true;
+		sprite_index = spr_cat_pounce;
+		vspeed = (max_jump_dst * vector_y) / 30;
+		hspeed = (max_jump_dst * vector_x) / 30;
 	var endPounce = function(){
 		obj_cat.sprite_index = spr_cat_idle;
+		obj_cat.is_attacking = true
 	}
 	
 	var endAttack = function(){
 		obj_cat.is_attacking = false;
 	}
-	var pounceTimer = call_later(0.2, time_source_units_seconds, endPounce);
+	var pounceTimer = call_later(0.5, time_source_units_seconds, endPounce);
 	var cooldownTimer = call_later(0.5 * global.light_level, time_source_units_seconds, endAttack )
 }
 
 
 ////STALK event
-if (keyboard_check(ord("D"))){
-         hspeed = stalk_speed * (12 /( global.light_level + 3));
-} else if (keyboard_check(ord("A"))){
-         hspeed = -stalk_speed * (12 / (global.light_level + 3));
-} else {
-         hspeed = 0;
+if (keyboard_check(ord("S"))){
+         vspeed = -vector_y *( stalk_speed * (12 /( global.light_level + 3)));	
+		 hspeed = -vector_x *( stalk_speed * (12 / (global.light_level + 3)));
 }
-
-if (keyboard_check(ord("W"))){
-         vspeed = -stalk_speed * (12 /( global.light_level + 3));	 
-} else if (keyboard_check(ord("S"))){
-         vspeed = stalk_speed * (12 /( global.light_level + 3));
-} else {
-         vspeed = 0;
+else if (keyboard_check(ord("W"))){
+         vspeed = vector_y *( stalk_speed * (12 /( global.light_level + 3)));	
+		 hspeed = vector_x *(stalk_speed * (12 / (global.light_level + 3)));
 }
 
 
@@ -89,7 +83,8 @@ if(keyboard_check(vk_space) && attack_timer <=0){
 }
 
 
-if(is_attacking){
+} else {
+	if(is_attacking){
 	with (obj_rat) {
 		if (point_distance(other.x, other.y, x, y) < 80) {
 			// Destroy the obj_rat instance
@@ -97,7 +92,6 @@ if(is_attacking){
 		}	
 	}
 }
-} else {
 		hspeed = 0;
         vspeed = 0;
 }
