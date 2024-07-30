@@ -28,6 +28,7 @@ Gamemaker Studio:
 Korg DS-10: for music
 Apache Open Office: text
 Piskel: (piskelapp.com) for sprites
+Inkscape: for the lovely tile graphics
 
 
 CONCEPTS
