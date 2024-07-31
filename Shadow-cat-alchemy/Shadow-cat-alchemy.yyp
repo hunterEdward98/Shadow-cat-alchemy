@@ -64,6 +64,8 @@
     {"id":{"name":"scrn_Lose","path":"rooms/scrn_Lose/scrn_Lose.yy",},},
     {"id":{"name":"scrn_Title","path":"rooms/scrn_Title/scrn_Title.yy",},},
     {"id":{"name":"scrn_Win","path":"rooms/scrn_Win/scrn_Win.yy",},},
+    {"id":{"name":"ani_RatBite","path":"sprites/ani_RatBite/ani_RatBite.yy",},},
+    {"id":{"name":"ani_RatRun","path":"sprites/ani_RatRun/ani_RatRun.yy",},},
     {"id":{"name":"ani_WizardInteract","path":"sprites/ani_WizardInteract/ani_WizardInteract.yy",},},
     {"id":{"name":"ani_WizardWalk","path":"sprites/ani_WizardWalk/ani_WizardWalk.yy",},},
     {"id":{"name":"Button","path":"sprites/Button/Button.yy",},},

@@ -8,3 +8,7 @@
     
     // Set the speed and direction of the Rat object
     speed = 3;
+	sprite_index = ani_RatRun;
+	image_angle = point_direction(x, y, target_x, target_y);
+   
+   //Bite Event?
