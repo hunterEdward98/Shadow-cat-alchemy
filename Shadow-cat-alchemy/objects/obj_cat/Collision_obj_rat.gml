@@ -1,4 +1,5 @@
-/// @description Kill the rat if pouncing
+/// @description Insert description here
+// You can write your code in this editor
 if(is_pouncing){
-	instance_destroy(other)
+	instance_destroy(other);
 }

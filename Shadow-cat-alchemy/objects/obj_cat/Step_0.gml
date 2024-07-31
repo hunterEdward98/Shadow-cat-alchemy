@@ -40,7 +40,7 @@ if (mouse_check_button(1)){
 		obj_cat.is_attacking = false;
 	}
 	var pounceTimer = call_later(0.5, time_source_units_seconds, endPounce);
-	var cooldownTimer = call_later( global.light_level / 2, time_source_units_seconds, endAttack )
+	var cooldownTimer = call_later( (global.light_level / 3) + 0.5, time_source_units_seconds, endAttack )
 }
 
 
