@@ -1,14 +1,17 @@
 
-// Get the position of the target Interactive object
-    var target_x = target_instance.x;
-    var target_y = target_instance.y;
-    
-    // Calculate the direction to the target
-    direction = point_direction(x, y, target_x, target_y);
-    
-    // Set the speed and direction of the Rat object
-    speed = 3;
-	sprite_index = ani_RatRun;
-	image_angle = point_direction(x, y, target_x, target_y);
-   
-   //Bite Event?
+// Step Event
+if (state == "run") {
+    if (target_instance != noone && place_meeting(x, y, target_instance)) {
+        state = "bite";
+        speed = 0;
+        // Play the bite animation
+        sprite_index = ani_RatBite;
+        image_speed = 1;
+		
+    } else {
+        // Move towards the target
+        if (target_instance != noone) {
+            direction = point_direction(x, y, target_instance.x, target_instance.y);
+        }
+    }
+}

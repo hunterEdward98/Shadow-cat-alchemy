@@ -88,13 +88,9 @@ if(keyboard_check(vk_space)){
 	
 	var _fadeOut = function(){
 		is_attacking = false;
-		
 	}
 	var slashTimer = call_later(0.33 * global.light_level, time_source_units_seconds, _fadeOut);
-
 }
-
-
 } else if (!is_pouncing){
 	vspeed = 0;
 	hspeed = 0;
