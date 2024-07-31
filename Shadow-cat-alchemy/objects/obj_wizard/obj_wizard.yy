@@ -34,10 +34,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"wizard_1",
-    "path":"sprites/wizard_1/wizard_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }
